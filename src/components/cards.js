@@ -11,17 +11,17 @@ import annieImg from "../img/annie.webp";
 import reinerImg from "../img/reiner.webp";
 import hanjiImg from "../img/hanji.webp";
 
-const Cards = () => {
+const Cards = (props) => {
   const cards = [
-    [0, "Eren", erenImg],
-    [1, "Mikasa", mikasaImg],
-    [2, "Armin", arminImg],
-    [3, "Conny", connyImg],
-    [4, "Historia", historiaImg],
-    [5, "Jean", jeanImg],
-    [6, "Annie", annieImg],
-    [7, "Reiner", reinerImg],
-    [8, "Hanji", hanjiImg],
+    ["Eren", erenImg],
+    ["Mikasa", mikasaImg],
+    ["Armin", arminImg],
+    ["Conny", connyImg],
+    ["Historia", historiaImg],
+    ["Jean", jeanImg],
+    ["Annie", annieImg],
+    ["Reiner", reinerImg],
+    ["Hanji", hanjiImg],
   ];
 
   const [clickedCards, setClickedCards] = useState(new Set());
@@ -48,9 +48,13 @@ const Cards = () => {
 
   const handleClick = (e) => {
     const cardId = e.target.id;
-    // CONT: 
-    // 1. Check if card has been clicked
-    // 2. Connect to scoreboard
+    if (clickedCards.has(cardId)) {
+      setClickedCards(new Set(clickedCards.clear()));
+      props.resetCurrScore();
+    } else {
+      setClickedCards(new Set(clickedCards.add(cardId)));
+      props.incrementCurrScore();
+    }
     clearCardGrid();
     displayCardsRandomly();
   };
@@ -64,12 +68,12 @@ const Cards = () => {
       const cardCell = document.createElement("div");
 
       const cardName = document.createElement("div");
-      cardName.innerText = card[1];
+      cardName.innerText = card[0];
 
       const cardImg = document.createElement("img");
       cardImg.classList.add("card-img");
       cardImg.id = card[0];
-      cardImg.src = card[2];
+      cardImg.src = card[1];
       cardImg.addEventListener("click", handleClick);
 
       cardCell.appendChild(cardName);

@@ -1,13 +1,41 @@
-import Scoreboard from './scoreboard';
-import Cards from './cards';
+import React, { useState } from "react";
+import Scoreboard from "./scoreboard";
+import Cards from "./cards";
 
-function App() {
+const App = () => {
+  const [resetTrigger, setResetTrigger] = useState(0);
+  const [incrementTrigger, setIncrementTrigger] = useState(0);
+
+  const resetCurrScore = () => {
+    setResetTrigger(1);
+  };
+
+  const incrementCurrScore = () => {
+    setIncrementTrigger(1);
+  };
+
+  const resetResetTrigger = () => {
+    setResetTrigger(0);
+  }
+
+  const resetIncrementTrigger = () => {
+    setIncrementTrigger(0);
+  }
+
   return (
     <div className="App">
-      <Scoreboard></Scoreboard>
-      <Cards></Cards>
+      <Scoreboard
+        resetTrigger={resetTrigger}
+        resetResetTrigger={resetResetTrigger}
+        incrementTrigger={incrementTrigger}
+        resetIncrementTrigger={resetIncrementTrigger}
+      ></Scoreboard>
+      <Cards
+        resetCurrScore={resetCurrScore}
+        incrementCurrScore={incrementCurrScore}
+      ></Cards>
     </div>
   );
-}
+};
 
 export default App;
