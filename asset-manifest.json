@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/odin-memory-game/static/css/main.d610a640.css",
+    "main.js": "/odin-memory-game/static/js/main.a6fa72b5.js",
+    "static/media/specialelite-regular-webfont.woff": "/odin-memory-game/static/media/specialelite-regular-webfont.b931112f3ea2645ecea8.woff",
+    "static/media/conny.webp": "/odin-memory-game/static/media/conny.0218a6e3f40e966cd11b.webp",
+    "static/media/specialelite-regular-webfont.woff2": "/odin-memory-game/static/media/specialelite-regular-webfont.c0608972d80ffb65ccb6.woff2",
+    "static/media/armin.webp": "/odin-memory-game/static/media/armin.0c5a2b44c67299d9f75a.webp",
+    "static/media/annie.webp": "/odin-memory-game/static/media/annie.f72d405703fc1f016750.webp",
+    "static/media/eren.webp": "/odin-memory-game/static/media/eren.c5fb704c7d58ced6af79.webp",
+    "static/media/jean.webp": "/odin-memory-game/static/media/jean.52784fbb43694a16f982.webp",
+    "static/media/reiner.webp": "/odin-memory-game/static/media/reiner.7d8d9969f51df4674c44.webp",
+    "static/media/historia.webp": "/odin-memory-game/static/media/historia.cd136ae8c9a92671611c.webp",
+    "static/media/hanji.webp": "/odin-memory-game/static/media/hanji.945d2392c136bc8fe359.webp",
+    "static/media/mikasa.webp": "/odin-memory-game/static/media/mikasa.660e976ce50650584b8d.webp",
+    "index.html": "/odin-memory-game/index.html",
+    "main.d610a640.css.map": "/odin-memory-game/static/css/main.d610a640.css.map",
+    "main.a6fa72b5.js.map": "/odin-memory-game/static/js/main.a6fa72b5.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d610a640.css",
+    "static/js/main.a6fa72b5.js"
+  ]
+}
