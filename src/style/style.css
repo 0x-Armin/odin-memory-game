@@ -1,0 +1,50 @@
+@font-face {
+  font-family: 'special_eliteregular';
+  src: url('./specialelite-regular-webfont.woff2') format('woff2'),
+       url('./specialelite-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+body {
+  background-color: black;
+  color: white;
+
+  font-family: 'special_eliteregular', 'Times New Roman', Times, serif;
+}
+
+.header,
+.scoreboard,
+.card-name {
+  text-align: center;
+}
+
+.header {
+  margin-top: 12px;
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.scoreboard {
+  margin-bottom: 8px;
+}
+
+.cards-grid {
+  width: 36%;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+}
+
+.cell {
+  border: grey solid 2px;
+}
+
+img {
+  max-height: 100%;
+  max-width: 100%;
+}

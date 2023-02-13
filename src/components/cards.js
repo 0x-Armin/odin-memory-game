@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./style.css";
+import "../style/style.css";
 
 import erenImg from "../img/eren.webp";
 import mikasaImg from "../img/mikasa.webp";
@@ -67,17 +67,18 @@ const Cards = (props) => {
     copyCards.forEach((card) => {
       const cardCell = document.createElement("div");
 
-      const cardName = document.createElement("div");
-      cardName.innerText = card[0];
-
       const cardImg = document.createElement("img");
       cardImg.classList.add("card-img");
       cardImg.id = card[0];
       cardImg.src = card[1];
       cardImg.addEventListener("click", handleClick);
 
-      cardCell.appendChild(cardName);
+      const cardName = document.createElement("div");
+      cardName.classList.add('card-name');
+      cardName.innerText = card[0];
+
       cardCell.appendChild(cardImg);
+      cardCell.appendChild(cardName);
 
       grid.appendChild(cardCell);
     });

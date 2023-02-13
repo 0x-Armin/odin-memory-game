@@ -24,6 +24,7 @@ const App = () => {
 
   return (
     <div className="App">
+      <div className='header'>AoT Memory Game</div>
       <Scoreboard
         resetTrigger={resetTrigger}
         resetResetTrigger={resetResetTrigger}

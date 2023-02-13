@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "../style/style.css";
 
 const Scoreboard = (props) => {
   const [currScore, setCurrScore] = useState(0);
@@ -35,7 +36,7 @@ const Scoreboard = (props) => {
   }, [currScore]);
 
   return (
-    <div>
+    <div class='scoreboard'>
       <div>Current score: {currScore}</div>
       <div>Top score: {topScore}</div>
     </div>
